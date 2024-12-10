@@ -1,0 +1,6 @@
+pandas
+torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+scipy
+joblib
+threadpoolctl
+matplotlib

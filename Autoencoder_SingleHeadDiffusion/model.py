@@ -2,6 +2,9 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
+# Check if CUDA is available
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 class AnomalyDetector(nn.Module):
     def __init__(self):
         super(AnomalyDetector, self).__init__()
@@ -30,7 +33,7 @@ class AnomalyDetector(nn.Module):
         return decoded
 
 # Instantiate the model
-autoencoder = AnomalyDetector()
+autoencoder = AnomalyDetector().to(device)
 
 # Define the optimizer and loss function
 optimizer = optim.Adam(autoencoder.parameters(), lr=0.001)
