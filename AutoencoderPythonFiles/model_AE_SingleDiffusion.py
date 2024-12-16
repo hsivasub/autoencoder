@@ -63,6 +63,6 @@ encoding_dim = 8
 
 
 # Instantiate the autoencoder
-model = Autoencoder(input_dim, encoding_dim).to(device)
+autoencoder_SingleDiffusion = Autoencoder(input_dim, encoding_dim).to(device)
 loss_fn = nn.L1Loss()
-optimizer = optim.Adam(model.parameters(), lr=0.001)
+optimizer = optim.Adam(autoencoder_SingleDiffusion.parameters(), lr=0.001)

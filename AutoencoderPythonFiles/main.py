@@ -10,7 +10,7 @@ from torch.utils.data import DataLoader, random_split, TensorDataset
 from sklearn.metrics import accuracy_score, precision_score, recall_score
 from sklearn.model_selection import train_test_split
 from autoencoder.AutoencoderPythonFiles.model_AE import *
-from autoencoder.AutoencoderPythonFiles.model_AE_Diffusion import *
+from autoencoder.AutoencoderPythonFiles.model_AE_SingleDiffusion import *
 from metrics import *
 from plots import *
 
